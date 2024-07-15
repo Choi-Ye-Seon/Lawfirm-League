@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>법률사무소 리그</title>
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+
+    <!-- Default CSS -->
+    <link rel="stylesheet" href="../css/default.css">
+
+    <!-- Practice CSS -->
+    <link rel="stylesheet" href="../css/practice.css">
+
+    <!-- jQuery CDN-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- Default JS -->
+    <script defer src="../js/default.js"></script>
+
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <!-- Gsap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Lodash JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Google icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="inner">
+            <h1 class="logo">
+                <a href="../index.html">
+                    <img src="../images/league_logo.png" alt="법률사무소 리그(LEAGUE)" class="scroll-on">
+                    <img src="../images/league_logo_white.png" alt="법률사무소 리그(LEAGUE)" class="scroll-off">
+                </a>
+            </h1>
+            <ul class="gnb">
+                <li class="main-menu">
+                    <a href="./about_01.html">로펌소개</a>
+                    <ul class="lnb">
+                        <li><a href="./about_01.html">인사말</a></li>
+                        <li><a href="./about_02.html">오시는길</a></li>
+                    </ul>
+                </li>
+                <li class="main-menu">
+                    <a href="./lawyer.html">변호사소개</a>
+                </li>
+                <li class="main-menu">
+                    <a href="./practice01.html">업무분야</a>
+                    <ul class="lnb">
+                        <li><a href="./practice01.html">성범죄</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">마약</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">형사사건</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">민사·행정</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">기업자문·소송</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">건설·부동산</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">이혼·상속</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">특수분야</a></li>
+                    </ul>
+                </li>
+                <li class="main-menu">
+                    <a href="./success.html">성공사례</a>
+                </li>
+                <li class="main-menu">
+                    <a href="./consulation.html">상담신청</a>
+                    <ul class="lnb">
+                        <li><a href="./consulation.html">상담신청</a></li>
+                        <li><a href="./review.html">고객후기</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- PC/Tablet menu open -->
+            <div class="btn--menu">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
+            <div class="clone-menu">
+                <ul class="gnb">
+                    <li class="main-menu">
+                        <a href="javascript:void(0)">
+                            <span>로펌소개</span></a>
+                        <ul class="lnb">
+                            <li><a href="./about_01.html">인사말</a></li>
+                            <li><a href="./about_02.html">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu">
+                        <a href="./lawyer.html">
+                            <span>변호사소개</span></a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="javascript:void(0)">
+                            <span>업무분야</span></a>
+                        <ul class="lnb">
+                            <li><a href="./practice01.html">성범죄</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">마약</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">형사사건</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">민사·행정</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">기업자문·소송</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">건설·부동산</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">이혼·상속</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">특수분야</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu">
+                        <a href="./success.html">
+                            <span>성공사례</span></a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="javascript:void(0)"><span>상담신청</span>
+                        </a>
+                        <ul class="lnb">
+                            <li><a href="./consulation.html">상담신청</a></li>
+                            <li><a href="./review.html">고객후기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- //Header -->
+
+    <!-- Sub Visual -->
+    <div class="sub-visual about-us">
+        <div class="inner">
+            <div class="titleBox">
+                <div class="sub-title">PRACTICE AREAS</div>
+                <h2 class="title">업무분야</h2>
+            </div>
+        </div>
+    </div>
+    <!-- // Sub Visual -->
+
+    <!-- Practice -->
+    <section class="practice">
+        <div class="inner">
+            <div class="sub titleBox">
+                <div class="sub-title">PRACTICE AREAS</div>
+                <h2 class="title">업무분야 | 성범죄</h2>
+            </div>
+
+            <div class="info">
+                <div class="thumbBox">
+                    <img src="../images/practice_img01.png" alt="성범죄">
+                </div>
+                <div class="textBox">
+                    <span>INTRODUCTION</span>
+                    <p class="description">성을 매개로 하는 신체적, 언어적, 심리적 폭력 등 성을 이용한 모든 폭력행위를 의미하고, 성폭력에서는 강간, 준강간, 유사강간, 강제추행, 공중밀집 장소에서의 추행, 공연 음란, 통신매체를 이용한 음란행위, 카메라 이용촬영, 음란성 메시지 보내는 행위, 성적 목적을 위한 공공장소 침입 행위 등이 포함됩니다.
+                        <br>
+                        <br>성폭력 범죄는 일정 사유에 해당하면 구속수사를 원칙으로하며, 고소권자 고소기간 등에 관해 특례를 규정하고있습니다.
+                        <br>또한 존스쿨 수강명령, 피의자의 얼굴 신상공개, 20년간 신상정보등록, 10년간 교육기관취업제한 등의 보안처분이 부과될 수 있습니다.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <h3>성범죄 사건의 특징</h3>
+                <ul>
+                    <li>
+                        <h4>불충분한 증거</h4>
+                        <p class="description">
+                            성범죄는 모텔, 집안, 화장실 등 개인적이며 은밀한 곳에서 발생하는 경우가 많습니다. 이러한 곳에서 사건이 발생하게 되면 CCTV 등 범죄를 입증할만한 증거가 많지 않습니다. 형사처벌은 자백이나 증거가 있을 경우 성립하기 때문에 성범죄 피해자의 경우 당시 상황을 입증할만한 증거를 확보하는 것이 중요하고, 성범죄 가해자로 지목받은 경우에도 역시 자신의 결백함을 입증할만한 증거를 찾는 노력이 필요합니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>진술의 신빙성</h4>
+                        <p class="description">
+                            성범죄는 가해자나 피해자의 진술에 의존하는 경우가 많습니다. 따라서 자신의 진술이 모순되거나 바뀌는 일이 없어야 합니다.
+                            <br>사건이 언제, 어디서, 어떻게 발생했는지 육하원칙에 따라 미리 정리를 해 둘 필요가 있습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>수사 전 범죄의 인정 여부 결정</h4>
+                        <p class="description">
+                            성범죄 가해자로 지목이 되었다면, 범행을 인정하되 선처를 구하는 방향으로 갈지, 아니면 범행 자체를 부인하는 방향으로 갈지 정해야 합니다.
+                            <br>수사는 한번에 끝나지 않고 수차례 반복되기 때문에 그때 그때마다 입장이 달라지면 안됩니다. 처음부터 범죄의 인정 여부를 확실히 정하고, 그 방향으로만 가야합니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>디지털 포렌식</h4>
+                        <p class="description">
+                            통신매체이용음란죄, 카메라촬영죄 등의 많은 성범죄의 경우 휴대전화, 테블릿, PC 등 통신기기들이 범행에 이용되는 경우가 많습니다. 이러한 기기들은 수사 전, 혹은 수사 중에 압수 또는 임의 제출 방식으로 수사기관에 제출되며, 수사기관은 제출된 기기들에 대하여 디지털 포렌직을 합니다. 디지털 포렌직을 하게 되면 삭제된 데이터도 복구 될 수 있습니다. 또한 한번 제출된 기기들은 사건이 종결되기 전까지 수개월 또는 1년이상 반환받지 못합니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>성범죄 피해자 지원 제도</h4>
+                        <p class="description">
+                            성범죄 피해자의 경우 가족 등 신뢰할 수 있는 사람과 동행하여 조사를 받을 수 있습니다. 또한 2차 가해 예방을 위해 가명을 사용할 수 있습니다. 아울러 성폭력·아동학대·장애인학대범죄피해자 및 성매매 피해아동·청소년은 국선변호인을 사건 발생 초기부터 수사, 재판에 이르는 전 과정에서 지원받을 수 있습니다.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="process">
+            <div class="inner">
+                <h3>법률사무소 리그(LEAGUE)만의 성범죄 사건 프로세스</h3>
+                <ul class="container">
+                    <li class="itemBox step01">
+                        <span class="step">STEP 01</span>
+                        <span class="title">리그 법률상담</span>
+                        <div class="icon">
+                            <img src="../images/icon10.png" alt="대면·비대면 법률상담">
+                        </div>
+
+                    </li>
+
+                    <li class="itemBox step02">
+                        <span class="step">STEP 02</span>
+                        <span class="title">정보공개청구</span>
+                        <div class="icon">
+                            <img src="../images/icon16.png" alt="정보공개청구">
+                        </div>
+                    </li>
+                    <li class="itemBox step03">
+                        <span class="step">STEP 03</span>
+                        <span class="title">조사동행</span>
+                        <div class="icon">
+                            <img src="../images/icon11.png" alt="조사동행">
+                        </div>
+                    </li>
+                    <li class="itemBox step04">
+                        <span class="step">STEP 04</span>
+                        <span class="title">변호인의견서 제출</span>
+                        <div class="icon">
+                            <img src="../images/icon09.png" alt="변호인의견서 제출">
+                        </div>
+                    </li>
+                    <li class="itemBox step05">
+                        <span class="step">STEP 05</span>
+                        <span class="title">합의</span>
+                        <div class="icon">
+                            <img src="../images/icon17.png" alt="합의">
+                        </div>
+                    </li>
+
+                    <li class="itemBox step06">
+                        <span class="step">STEP 06</span>
+                        <span class="title">결과 통지</span>
+                        <div class="icon">
+                            <img src="../images/icon14.png" alt="결과 통지">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="success">
+            <div class="inner">
+                <h3>주요 성공 사례</h3>
+
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="category">성범죄</div>
+                            <div class="slideBox">
+                                <a href="javascript:void(0)">
+                                    <div class="legal-title">강제추행죄</div>
+                                    <div class="legal-result">불송치(무혐의)</div>
+                                    <div class="description">
+                                        의뢰인은 술에 많이 취해 있던 상태에서 같은 학교 여학생 B씨에게 다가가 친근하게 인사하려는 의도로 B씨의 어깨에 손을 올렸습니다. B씨는 이를 불쾌하게 느끼고 의뢰인을 고소한 사건입니다.
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="category">성범죄</div>
+                            <div class="slideBox">
+                                <a href="javascript:void(0)">
+                                    <div class="legal-title">강제추행죄</div>
+                                    <div class="legal-result">불송치(무혐의)</div>
+                                    <div class="description">
+                                        의뢰인은 술에 많이 취해 있던 상태에서 같은 학교 여학생 B씨에게 다가가 친근하게 인사하려는 의도로 B씨의 어깨에 손을 올렸습니다. B씨는 이를 불쾌하게 느끼고 의뢰인을 고소한 사건입니다.
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="category">성범죄</div>
+                            <div class="slideBox">
+                                <a href="javascript:void(0)">
+                                    <div class="legal-title">강제추행죄</div>
+                                    <div class="legal-result">불송치(무혐의)</div>
+                                    <div class="description">
+                                        의뢰인은 술에 많이 취해 있던 상태에서 같은 학교 여학생 B씨에게 다가가 친근하게 인사하려는 의도로 B씨의 어깨에 손을 올렸습니다. B씨는 이를 불쾌하게 느끼고 의뢰인을 고소한 사건입니다.
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="category">성범죄</div>
+                            <div class="slideBox">
+                                <a href="javascript:void(0)">
+                                    <div class="legal-title">강제추행죄</div>
+                                    <div class="legal-result">불송치(무혐의)</div>
+                                    <div class="description">
+                                        의뢰인은 술에 많이 취해 있던 상태에서 같은 학교 여학생 B씨에게 다가가 친근하게 인사하려는 의도로 B씨의 어깨에 손을 올렸습니다. B씨는 이를 불쾌하게 느끼고 의뢰인을 고소한 사건입니다.
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="category">성범죄</div>
+                            <div class="slideBox">
+                                <a href="javascript:void(0)">
+                                    <div class="legal-title">강제추행죄</div>
+                                    <div class="legal-result">불송치(무혐의)</div>
+                                    <div class="description">
+                                        의뢰인은 술에 많이 취해 있던 상태에서 같은 학교 여학생 B씨에게 다가가 친근하게 인사하려는 의도로 B씨의 어깨에 손을 올렸습니다. B씨는 이를 불쾌하게 느끼고 의뢰인을 고소한 사건입니다.
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrowBox">
+                    <div class="swiper-button-prev"></div>
+
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="inner">
+            <h2 class="logo">
+                <img src="../images/league_logo.png" alt="법률사무소 리그(LEAGUE)">
+            </h2>
+            <ul class="footer-menu">
+                <li><a href="javascript:void(0)" class="privacy">개인정보처리방침</a></li>
+                <li><a href="javascript:void(0)">이메일무단수집거부</a></li>
+            </ul>
+            <div class="company-info">
+                <p><span>법률사무소 리그 (LAW FIRM LEAGUE)</span><span>대표 변호사 : 김동훈</span><span>사업자번호 : 679-42-00499</span></p>
+                <p>주소 : 서울 서초구 서초중앙로 18길 23, 2층 (서초동, 효암빌딩)</p>
+            </div>
+            <p class="copyright">&copy;<span class="year"></span>LAWFIRM LEAGUE ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+    <!-- Top btn -->
+    <div id="to-top">
+        <div class="material-symbols-outlined">arrow_upward</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script>
+        new Swiper('.practice .success .swiper', {
+            slidesPerView: 1,
+            // slidesPerGroup: 3,
+            spaceBetween: 12,
+            pagination: {
+                el: '.practice  .success .swiper-pagination',
+                type: "fraction"
+            },
+            navigation: {
+                nextEl: '.practice  .success .swiper-button-next',
+                prevEl: '.practice .success .swiper-button-prev',
+            },
+            breakpoints: {
+                460: {
+                    slidesPerView: 2,
+                    spaceBetween: 16,
+
+                },
+                720: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+
+                }
+            }
+
+        });
+    </script>
+</body>
+
+</html>

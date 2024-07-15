@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>법률사무소 리그</title>
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+
+    <!-- Default CSS -->
+    <link rel="stylesheet" href="../css/default.css">
+
+    <!-- Success CSS -->
+    <link rel="stylesheet" href="../css/success.css">
+
+    <!-- jQuery CDN-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- Default JS -->
+    <script defer src="../js/default.js"></script>
+
+    <!-- Subpage JS -->
+    <script defer src="../js/success.js"></script>
+
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Gsap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Lodash JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Google icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="inner">
+            <h1 class="logo">
+                <a href="../index.html">
+                    <img src="../images/league_logo.png" alt="법률사무소 리그(LEAGUE)" class="scroll-on">
+                    <img src="../images/league_logo_white.png" alt="법률사무소 리그(LEAGUE)" class="scroll-off">
+                </a>
+            </h1>
+            <ul class="gnb">
+                <li class="main-menu">
+                    <a href="./about_01.html">로펌소개</a>
+                    <ul class="lnb">
+                        <li><a href="./about_01.html">인사말</a></li>
+                        <li><a href="./about_02.html">오시는길</a></li>
+                    </ul>
+                </li>
+                <li class="main-menu">
+                    <a href="./lawyer.html">변호사소개</a>
+                </li>
+                <li class="main-menu">
+                    <a href="./practice01.html">업무분야</a>
+                    <ul class="lnb">
+                        <li><a href="./practice01.html">성범죄</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">마약</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">형사사건</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">민사·행정</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">기업자문·소송</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">건설·부동산</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">이혼·상속</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">특수분야</a></li>
+                    </ul>
+                </li>
+                <li class="main-menu">
+                    <a href="./success.html">성공사례</a>
+                </li>
+                <li class="main-menu">
+                    <a href="./consulation.html">상담신청</a>
+                    <ul class="lnb">
+                        <li><a href="./consulation.html">상담신청</a></li>
+                        <li><a href="./review.html">고객후기</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- PC/Tablet menu open -->
+            <div class="btn--menu">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
+            <div class="clone-menu">
+                <ul class="gnb">
+                    <li class="main-menu">
+                        <a href="javascript:void(0)">
+                            <span>로펌소개</span></a>
+                        <ul class="lnb">
+                            <li><a href="./about_01.html">인사말</a></li>
+                            <li><a href="./about_02.html">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu">
+                        <a href="./lawyer.html">
+                            <span>변호사소개</span></a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="javascript:void(0)">
+                            <span>업무분야</span></a>
+                        <ul class="lnb">
+                            <li><a href="./practice01.html">성범죄</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">마약</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">형사사건</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">민사·행정</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">기업자문·소송</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">건설·부동산</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">이혼·상속</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">특수분야</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu">
+                        <a href="./success.html">
+                            <span>성공사례</span></a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="javascript:void(0)"><span>상담신청</span>
+                        </a>
+                        <ul class="lnb">
+                            <li><a href="./consulation.html">상담신청</a></li>
+                            <li><a href="./review.html">고객후기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- //Header -->
+
+    <!-- Sub Visual -->
+    <div class="sub-visual">
+        <div class="inner">
+            <div class="titleBox">
+                <div class="sub-title">SUCCESS STORY</div>
+                <h2 class="title">성공사례</h2>
+            </div>
+        </div>
+    </div>
+    <!-- // Sub Visual -->
+
+    <!-- Success Story -->
+    <section class="success-story">
+        <div class="inner">
+            <div class="sub titleBox">
+                <div class="sub-title">SUCCESS STORY</div>
+                <h2 class="title">성공사례</h2>
+            </div>
+            <div class="swiper success-menu">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide tab-menu on">전체보기</div>
+                    <div class="swiper-slide tab-menu ">성범죄</div>
+                    <div class="swiper-slide tab-menu ">마약</div>
+                    <div class="swiper-slide tab-menu ">형사사건</div>
+                    <div class="swiper-slide tab-menu ">민사·행정</div>
+                    <div class="swiper-slide tab-menu ">기업자문·소송 </div>
+                    <div class="swiper-slide tab-menu ">건설·부동산</div>
+                    <div class="swiper-slide tab-menu ">이혼·상속</div>
+                    <div class="swiper-slide tab-menu ">특수분야</div>
+                </div>
+            </div>
+            <!-- 전체보기 -->
+            <div class="tab-con view">
+                <div class="container">
+                    <a class="content" href="./success_v.html">
+                        <div class="category">민사·행정</div>
+                        <div class="itemBox">
+                            <div class="legal-title">채무불이행자명부등재신청</div>
+                            <div class="legal-result">승소</div>
+                            <div class="description">
+                                의뢰인께서는 채무자로부터 부당이득금 수천만원을 받지 못하여 민사소송을 제기하여 승소하셨습니다. 그러나 채무자는 자신의 명의로 된 재산이 전혀 없어 강제집행에 어려움을 겪었고, 저희 로펌은 채무자 압박수단으로서 채무불이행자명부등재신청을 진행하였습니다.
+                            </div>
+                        </div>
+                    </a>
+                    <a class="content" href="javascript:void(0)" onclick="notice()">
+                        <div class="category">형사사건</div>
+                        <div class="itemBox">
+                            <div class="legal-title">폭행죄/재물손괴죄/업무방해죄</div>
+                            <div class="legal-result">유죄인정</div>
+                            <div class="description">
+                                의뢰인은 위험한 물건을 소지한 환자의 보호자(피고인)로부터 폭행을 당하고, 병원 내 물건이 파손되는 등 총체적으로 병원 운영에 방해가 되었다 판단하여 피고인을 고소한 사건입니다.
+                            </div>
+                        </div>
+                    </a>
+                    <a class="content" href="javascript:void(0)" onclick="notice()">
+                        <div class="category">특수분야</div>
+                        <div class="itemBox">
+                            <div class="legal-title">저작권법위반</div>
+                            <div class="legal-result">불송치(혐의없음)</div>
+                            <div class="description">
+                                의뢰인은 의류 디자인을 도용하였다는 이유로 저작권법 위반으로 고소를 당한 사건입니다. 법률사무소 리그(LEAGUE)는 수사에 최대한 협조하며 직접 제조 판매한 것이 아닌점과 고의성이 없다는 점을 적극 피력하여 불송치(혐의없음) 결과를 받아냈습니다.
+                            </div>
+                        </div>
+                    </a>
+                    <a class="content" href="javascript:void(0)" onclick="notice()">
+                        <div class="category">성범죄</div>
+                        <div class="itemBox">
+                            <div class="legal-title">강제추행죄</div>
+                            <div class="legal-result">불송치(혐의없음)</div>
+                            <div class="description">
+                                의뢰인은 술에 많이 취해 있던 상태에서 같은 학교 여학생 B씨에게 다가가 친근하게 인사하려는 의도로 B씨의 어깨에 손을 올렸습니다. B씨는 이를 불쾌하게 느끼고 의뢰인을 고소한 사건입니다.
+                            </div>
+                        </div>
+                    </a>
+                    <a class="content" href="javascript:void(0)" onclick="notice()">
+                        <div class="category">형사사건</div>
+                        <div class="itemBox">
+                            <div class="legal-title">사기죄/업무상배임</div>
+                            <div class="legal-result">유죄인정</div>
+                            <div class="description">
+                                고소인과 친인척 관계였던 피의자는 사업진행을 위해 보증금이 필요하니 보증금을 빌려주면, 자신의 압류 통장에 있는 수십억원 돈으로 변제하겠다고 의뢰인을 속여 약 5,000만원의 금원을 편취한 사건입니다.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pagination"><a href="javascript:void(0)">1</a></div>
+            </div>
+            <!-- 성범죄 -->
+            <div class="tab-con ">
+                <div class="container">
+                    <a class="content" href="javascript:void(0)" onclick="notice()">
+                        <div class="category">성범죄</div>
+                        <div class="itemBox">
+                            <div class="legal-title">강제추행죄</div>
+                            <div class="legal-result">불송치(혐의없음)</div>
+                            <div class="description">
+                                의뢰인은 술에 많이 취해 있던 상태에서 같은 학교 여학생 B씨에게 다가가 친근하게 인사하려는 의도로 B씨의 어깨에 손을 올렸습니다. B씨는 이를 불쾌하게 느끼고 의뢰인을 고소한 사건입니다.
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="pagination"><a href="javascript:void(0)">1</a></div>
+            </div>
+            <!-- 마약 -->
+            <div class="tab-con ">
+                <p class="comment">등록된 게시물이 없습니다.</p>
+                <div class="pagination"><a href="javascript:void(0)">1</a></div>
+            </div>
+            <!-- 형사사건 -->
+            <div class="tab-con ">
+                <div class="container">
+                    <a class="content" href="javascript:void(0)" onclick="notice()">
+                        <div class="category">형사사건</div>
+                        <div class="itemBox">
+                            <div class="legal-title">폭행죄/재물손괴죄/업무방해죄</div>
+                            <div class="legal-result">유죄인정</div>
+                            <div class="description">
+                                의뢰인은 위험한 물건을 소지한 환자의 보호자(피고인)로부터 폭행을 당하고, 병원 내 물건이 파손되는 등 총체적으로 병원 운영에 방해가 되었다 판단하여 피고인을 고소한 사건입니다.
+                            </div>
+                        </div>
+                    </a>
+                    <a class="content" href="javascript:void(0)" onclick="notice()">
+                        <div class="category">형사사건</div>
+                        <div class="itemBox">
+                            <div class="legal-title">사기죄/업무상배임</div>
+                            <div class="legal-result">유죄인정</div>
+                            <div class="description">
+                                고소인과 친인척 관계였던 피의자는 사업진행을 위해 보증금이 필요하니 보증금을 빌려주면, 자신의 압류 통장에 있는 수십억원 돈으로 변제하겠다고 의뢰인을 속여 약 5,000만원의 금원을 편취한 사건입니다.
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="pagination"><a href="javascript:void(0)">1</a></div>
+            </div>
+            <!-- 민사·행정 -->
+            <div class="tab-con ">
+                <div class="container">
+                    <a class="content" href="./success_v.html">
+                        <div class="category">민사·행정</div>
+                        <div class="itemBox">
+                            <div class="legal-title">채무불이행자명부등재신청</div>
+                            <div class="legal-result">승소</div>
+                            <div class="description">
+                                의뢰인께서는 채무자로부터 부당이득금 수천만원을 받지 못하여 민사소송을 제기하여 승소하셨습니다. 그러나 채무자는 자신의 명의로 된 재산이 전혀 없어 강제집행에 어려움을 겪었고, 저희 로펌은 채무자 압박수단으로서 채무불이행자명부등재신청을 진행하였습니다.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="pagination"><a href="javascript:void(0)">1</a></div>
+            </div>
+            <!-- 기업자문·소송 -->
+            <div class="tab-con ">
+                <p class="comment">등록된 게시물이 없습니다.</p>
+                <div class="pagination"><a href="javascript:void(0)">1</a></div>
+            </div>
+            <!-- 건설·부동산 -->
+            <div class="tab-con ">
+                <p class="comment">등록된 게시물이 없습니다.</p>
+                <div class="pagination"><a href="javascript:void(0)">1</a></div>
+            </div>
+            <!-- 이혼·상속 -->
+            <div class="tab-con ">
+                <p class="comment">등록된 게시물이 없습니다.</p>
+                <div class="pagination"><a href="javascript:void(0)">1</a></div>
+            </div>
+            <!-- 특수분야 -->
+            <div class="tab-con ">
+                <div class="container">
+                    <a class="content" href="javascript:void(0)" onclick="notice()">
+                        <div class="category">특수분야</div>
+                        <div class="itemBox">
+                            <div class="legal-title">저작권법위반</div>
+                            <div class="legal-result">불송치(혐의없음)</div>
+                            <div class="description">
+                                의뢰인은 의류 디자인을 도용하였다는 이유로 저작권법 위반으로 고소를 당한 사건입니다. 법률사무소 리그(LEAGUE)는 수사에 최대한 협조하며 직접 제조 판매한 것이 아닌점과 고의성이 없다는 점을 적극 피력하여 불송치(혐의없음) 결과를 받아냈습니다.
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="pagination"><a href="javascript:void(0)">1</a></div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="inner">
+            <h2 class="logo">
+                <img src="../images/league_logo.png" alt="법률사무소 리그(LEAGUE)">
+            </h2>
+            <ul class="footer-menu">
+                <li><a href="javascript:void(0)" class="privacy">개인정보처리방침</a></li>
+                <li><a href="javascript:void(0)">이메일무단수집거부</a></li>
+            </ul>
+            <div class="company-info">
+                <p><span>법률사무소 리그 (LAW FIRM LEAGUE)</span><span>대표 변호사 : 김동훈</span><span>사업자번호 : 679-42-00499</span></p>
+                <p>주소 : 서울 서초구 서초중앙로 18길 23, 2층 (서초동, 효암빌딩)</p>
+            </div>
+            <p class="copyright">&copy;<span class="year"></span>LAWFIRM LEAGUE ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+    <!-- Top btn -->
+    <div id="to-top">
+        <div class="material-symbols-outlined">arrow_upward</div>
+    </div>
+
+</body>
+
+</html>

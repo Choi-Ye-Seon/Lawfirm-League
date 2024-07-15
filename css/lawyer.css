@@ -1,0 +1,217 @@
+/* 변호사 소개 */
+
+
+/* Sub Visual */
+
+.sub-visual {
+    background-image: url(../images/lawyer_subvisual.png);
+}
+
+
+/* //Sub Visual */
+
+.lawyer {
+    padding: 5.8824em 0;
+    /*100*/
+}
+
+.lawyer .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 21px;
+}
+
+.lawyer .lawyerBox {
+    position: relative;
+    max-width: 386px;
+    overflow: hidden;
+}
+
+.lawyer .lawyerBox>span {
+    position: absolute;
+    background-color: #05283C;
+    transition: all .5s;
+}
+
+.lawyer .lawyerBox>span:nth-child(1) {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 3px;
+}
+
+.lawyer .lawyerBox>span:nth-child(2) {
+    right: 0;
+    top: 0;
+    width: 3px;
+    height: 0;
+}
+
+.lawyer .lawyerBox>span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+}
+
+.lawyer .lawyerBox>span:nth-child(4) {
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    height: 0;
+}
+
+.lawyer .lawyerBox:hover>span:nth-child(1),
+.lawyer .lawyerBox:hover>span:nth-child(3) {
+    width: 100%;
+}
+
+.lawyer .lawyerBox:hover>span:nth-child(2),
+.lawyer .lawyerBox:hover>span:nth-child(4) {
+    height: 100%;
+}
+
+.lawyer .lawyerBox img {
+    width: 100%;
+}
+
+.lawyer .lawyerBox:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .3);
+}
+
+.lawyer .lawyerBox .nameBox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(5, 40, 60, .8);
+}
+
+.lawyer .lawyerBox .nameBox {
+    color: var(--font-white);
+    width: 100%;
+    padding: 1.1765em 0.7059em;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.lawyer .lawyerBox .nameBox .name {
+    font-size: 1.2941rem;
+    font-weight: 500;
+    letter-spacing: 6px;
+}
+
+@media (max-width:980px) {
+    .lawyer .container {
+        grid-gap: 16px;
+    }
+    .lawyer .lawyerBox .nameBox .name {
+        font-size: 1.1765rem;
+    }
+}
+
+@media (max-width:720px) {
+    .lawyer .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:460px) {
+    .lawyer .container {
+        grid-gap: 12px;
+    }
+    .lawyer .lawyerBox .nameBox {
+        word-break: keep-all;
+        line-height: 1.3;
+    }
+    .lawyer .lawyerBox .nameBox {
+        font-size: 0.8750rem;
+    }
+    .lawyer .lawyerBox .nameBox .name {
+        font-size: 1rem;
+    }
+}
+
+
+/* 변호사 소개 - lawyer-info */
+
+.lawyer .lawyer-info.container {
+    display: flex;
+    align-items: start;
+    gap: 60px;
+    margin-bottom: 130px;
+}
+
+.lawyer .lawyer-info .lawyerBox {
+    flex-shrink: 0;
+}
+
+.lawyer .lawyer-info .lawyerBox:hover {
+    box-shadow: none;
+}
+
+.lawyer .lawyer-info .textBox .nameBox {
+    padding-bottom: 1.7647em;
+}
+
+.lawyer .lawyer-info .textBox .nameBox .name {
+    font-size: 1.7647rem;
+    letter-spacing: 10px;
+    font-weight: 600;
+}
+
+.lawyer .lawyer-info .textBox>ul {
+    padding-top: 2.0588em;
+}
+
+.lawyer .lawyer-info .textBox>ul>li {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 1.7647em;
+    box-sizing: border-box;
+}
+
+.lawyer .lawyer-info .textBox>ul>li::before {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    background-color: #272727;
+}
+
+.lawyer .lawyer-info .textBox .title {
+    font-size: 1.0588rem;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 0.5em;
+}
+
+.lawyer .lawyer-info .textBox ul.career {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.lawyer .lawyer-info .textBox .description {
+    font-size: 0.9412rem;
+}
+
+#lawyer01,
+#lawyer02,
+#lawyer03,
+#lawyer04,
+#lawyer05 {
+    scroll-margin-top: 200px;
+}
+
+@media (max-width:980px) {
+    .lawyer .lawyer-info.container {
+        flex-direction: column;
+    }
+    .lawyer .lawyer-info .lawyerBox {
+        margin: 0 auto;
+    }
+}

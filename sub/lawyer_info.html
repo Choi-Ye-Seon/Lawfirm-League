@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>법률사무소 리그</title>
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+
+    <!-- Default CSS -->
+    <link rel="stylesheet" href="../css/default.css">
+
+    <!-- Lawyer CSS -->
+    <link rel="stylesheet" href="../css/lawyer.css">
+
+    <!-- jQuery CDN-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- Default JS -->
+    <script defer src="../js/default.js"></script>
+
+    <!-- Gsap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Lodash JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Google icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="inner">
+            <h1 class="logo">
+                <a href="../index.html">
+                    <img src="../images/league_logo.png" alt="법률사무소 리그(LEAGUE)" class="scroll-on">
+                    <img src="../images/league_logo_white.png" alt="법률사무소 리그(LEAGUE)" class="scroll-off">
+                </a>
+            </h1>
+            <ul class="gnb">
+                <li class="main-menu">
+                    <a href="./about_01.html">로펌소개</a>
+                    <ul class="lnb">
+                        <li><a href="./about_01.html">인사말</a></li>
+                        <li><a href="./about_02.html">오시는길</a></li>
+                    </ul>
+                </li>
+                <li class="main-menu">
+                    <a href="./lawyer.html">변호사소개</a>
+                </li>
+                <li class="main-menu">
+                    <a href="./practice01.html">업무분야</a>
+                    <ul class="lnb">
+                        <li><a href="./practice01.html">성범죄</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">마약</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">형사사건</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">민사·행정</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">기업자문·소송</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">건설·부동산</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">이혼·상속</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">특수분야</a></li>
+                    </ul>
+                </li>
+                <li class="main-menu">
+                    <a href="./success.html">성공사례</a>
+                </li>
+                <li class="main-menu">
+                    <a href="./consulation.html">상담신청</a>
+                    <ul class="lnb">
+                        <li><a href="./consulation.html">상담신청</a></li>
+                        <li><a href="./review.html">고객후기</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- PC/Tablet menu open -->
+            <div class="btn--menu">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
+            <div class="clone-menu">
+                <ul class="gnb">
+                    <li class="main-menu">
+                        <a href="javascript:void(0)">
+                            <span>로펌소개</span></a>
+                        <ul class="lnb">
+                            <li><a href="./about_01.html">인사말</a></li>
+                            <li><a href="./about_02.html">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu">
+                        <a href="./lawyer.html">
+                            <span>변호사소개</span></a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="javascript:void(0)">
+                            <span>업무분야</span></a>
+                        <ul class="lnb">
+                            <li><a href="./practice01.html">성범죄</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">마약</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">형사사건</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">민사·행정</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">기업자문·소송</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">건설·부동산</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">이혼·상속</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">특수분야</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu">
+                        <a href="./success.html">
+                            <span>성공사례</span></a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="javascript:void(0)"><span>상담신청</span>
+                        </a>
+                        <ul class="lnb">
+                            <li><a href="./consulation.html">상담신청</a></li>
+                            <li><a href="./review.html">고객후기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- //Header -->
+
+    <!-- Sub Visual -->
+    <div class="sub-visual">
+        <div class="inner">
+            <div class="titleBox">
+                <div class="sub-title">PROFESSIONAL LAWYER</div>
+                <h2 class="title">변호사 소개</h2>
+            </div>
+        </div>
+    </div>
+    <!-- // Sub Visual -->
+
+    <section class="lawyer">
+        <div class="inner">
+            <div class="sub titleBox">
+                <div class="sub-title">PROFESSIONAL LAWYER</div>
+                <h2 class="title">변호사 소개</h2>
+            </div>
+
+            <div id="lawyer01" class="lawyer-info container">
+                <div class="lawyerBox">
+                    <img src="../images/lawyer_ceo.png" alt="김동훈 대표변호사">
+                    <div class="nameBox"><span class="name">김동훈</span> 대표변호사</div>
+                </div>
+                <div class="textBox">
+                    <div class="sitename">Law Firm League</div>
+                    <div class="nameBox"><span class="name">김동훈</span>대표변호사</div>
+                    <p class="description">"소송은 긴 호흡이자 긴 서사입니다.
+                        <br>때로는 쓰디 쓴 이야기로 시작하기도 하며, 또 때로는 시간의 여정 속에서 벌어지는 사건의 연속이기도 합니다.
+                        <br>탄탄한 서사와 매력적인 인물들이 하나의 작품을 만들 듯, 당신의 이야기가 온전하게 완결될 수 있도록 지지하겠습니다."</p>
+                    <ul>
+                        <li>
+                            <div class="title">학력</div>
+                            <ul class="career">
+                                <li class="description">- 고려대학교 법학대학</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="title">경력</div>
+                            <ul class="career">
+                                <li class="description">- 現 국회입법지원위원</li>
+                                <li class="description">- 現 서초경찰서 자문변호사</li>
+                                <li class="description">- 前 특허청 심사관</li>
+                                <li class="description">- 前 법무법인 로베리(파트너변호사)</li>
+                                <li class="description">- 前 법무법인 이평</li>
+                                <li class="description">- 前 특허법인 코리아나</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="title">방송</div>
+                            <ul class="career">
+                                <li class="description">- SBS '그것이알고싶다'</li>
+                                <li class="description">- MBC 'PD수첩'</li>
+                                <li class="description">- KBS '취재파일K'</li>
+                                <li class="description">- JTBC, YTN, TV조선, 조선일보, 중앙일보, 한겨레신문 등 다수</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="title">전문분야</div>
+                            <ul class="career">
+                                <li class="description">- 형사 소송</li>
+                                <li class="description">- 민사·행정 소송</li>
+                                <li class="description">- 동물분쟁 </li>
+                                <li class="description">- 지식재산권, 특허권 관련</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="lawyer02" class="lawyer-info container">
+                <div class="lawyerBox">
+                    <img src="../images/lawyer01.png" alt="오혜림 대표변호사">
+                    <div class="nameBox"><span class="name">오혜림</span> 대표변호사</div>
+                </div>
+                <div class="textBox">
+                    <div class="sitename">Law Firm League</div>
+                    <div class="nameBox"><span class="name">오혜림</span>대표변호사</div>
+                    <p class="description">
+                        "용기낸 사람을 지켜주는 것은 우리의 사명이자 책무입니다.
+                        <br>누구나 예기치 않게 사건에 연루될 수 있습니다. 어려움은, 때론 급하게 찾아오기도 합니다.
+                        <br>후회스러운 일이 발생할 수도 있습니다. 당신과 한걸음씩 함께 나아겠습니다."</p>
+                    <ul>
+                        <li>
+                            <div class="title">학력</div>
+                            <ul class="career">
+                                <li class="description">- 이화여자대학교</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="title">경력</div>
+                            <ul class="career">
+                                <li class="description">- 現 법률사무소 리그 대표변호사</li>
+                                <li class="description">- 前 법무법인 우면 파트너 변호사</li>
+                                <li class="description">- 前 보건복지부 자문변호사</li>
+                                <li class="description">- 前 농림축산식품부 자문변호사</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="title">전문분야</div>
+                            <ul class="career">
+                                <li class="description">- 민사 소송</li>
+                                <li class="description">- 의료 소송</li>
+                                <li class="description">- 이혼 소송 및 상속</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="lawyer03" class="lawyer-info container">
+                <div class="lawyerBox">
+                    <img src="../images/lawyer02.png" alt="전수완 파트너변호사">
+                    <div class="nameBox"><span class="name">전수완</span> 파트너변호사</div>
+                </div>
+
+                <div class="textBox">
+                    <div class="sitename">Law Firm League</div>
+                    <div class="nameBox"><span class="name">전수완</span>파트너변호사</div>
+                    <p class="description">우리는 당신의 미래를 위해 더 나은 방향을 제시하며, 법적문제를 해결하고 성장을 돕기 위해 여기 있습니다. 당신의 이야기에 귀 기울이고 당신의 목소리를 법정에서 힘차게 드러낼 수 있도록 지원하겠습니다. 당신의 성장이 우리의 성공이며 당신의 성공과 정의의 승리를 위해 끝까지 함께 걸어가겠습니다.</p>
+                    <ul>
+                        <li>
+                            <div class="title">학력</div>
+                            <ul class="career">
+                                <li class="description">- 서울대학교 법학과</li>
+                                <li class="description">- 서울대학교 법학전문대학원</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="title">경력</div>
+                            <ul class="career">
+                                <li class="description">- 現 법률사무소 리그 파트너변호사</li>
+                                <li class="description">- 現 공인노무사</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="title">전문분야</div>
+                            <ul class="career">
+                                <li class="description">- 형사 소송</li>
+                                <li class="description">- 민사·행정 소송</li>
+                                <li class="description">- 기업 자문 및 분쟁 소송</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="lawyer04" class="lawyer-info container">
+                <div class="lawyerBox">
+                    <img src="../images/lawyer03.png" alt="권지예 파트너변호사">
+                    <div class="nameBox"><span class="name">권지예</span> 파트너변호사</div>
+                </div>
+
+                <div class="textBox">
+                    <div class="sitename">Law Firm League</div>
+                    <div class="nameBox"><span class="name">권지예</span>파트너변호사</div>
+                    <p class="description">우리는 더 선명하고, 더 바람직하고, 그리고 더 나은 미래를 바라고 있습니다. 어떤 방법이 당신을 위한 것인지 끊임 없이 고민하고, 답을 찾습니다.</p>
+                    <ul>
+                        <li>
+                            <div class="title">학력</div>
+                            <ul class="career">
+                                <li class="description">- 이화여자대학교 법학과</li>
+                                <li class="description">- 이화여자대학교 법학전문대학원</li>
+                                <li class="description">- 서울대학교 법학전문대학원 금융법무과정 16기 수료</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="title">경력</div>
+                            <ul class="career">
+                                <li class="description">- 現 법률사무소 리그 파트너변호사</li>
+                                <li class="description">- 前 한국성장금융투자운용㈜ 준법지원실</li>
+                                <li class="description">- 前 제주항공㈜ 법무팀, 준법지원팀</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="title">활동</div>
+                            <ul class="career">
+                                <li class="description">- 現 대한변호사협회 벤처스타트업 법률지원 특별위원회 위원</li>
+                                <li class="description">- 現 인천 스타트업파크 법률 멘토</li>
+                                <li class="description">- 前 대한변호사협회 대의원 </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <div class="title">전문분야</div>
+                            <ul class="career">
+                                <li class="description">- 민사 소송</li>
+                                <li class="description">- 부동산 소송 (전세사기, 임대차보호 등)</li>
+                                <li class="description">- 기업 자문 및 분쟁 소송</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="lawyer05" class="lawyer-info container">
+                <div class="lawyerBox">
+                    <img src="../images/lawyer04.png" alt="강신유 파트너변호사">
+                    <div class="nameBox"><span class="name">강신유</span> 파트너변호사</div>
+                </div>
+
+                <div class="textBox">
+                    <div class="sitename">Law Firm League</div>
+                    <div class="nameBox"><span class="name">강신유</span>파트너변호사</div>
+                    <p class="description">법의 수호자로서 여러분의 권익을 보호하겠습니다. 언제든지 신뢰할 수 있는 법적 조언을 제공하겠습니다. 여러분의 든든한 법적 파트너로서, 함께 미래를 밝게 만들어 나가겠습니다.</p>
+                    <ul>
+                        <li>
+                            <div class="title">학력</div>
+                            <ul class="career">
+                                <li class="description">- 고려대학교 법학과</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="title">경력</div>
+                            <ul class="career">
+                                <li class="description">- 現 법률사무소 리그 파트너변호사</li>
+                                <li class="description">- 前 법무법인 소헌</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="title">전문분야</div>
+                            <ul class="career">
+                                <li class="description">- 민사 소송</li>
+                                <li class="description">- 동물분쟁연구</li>
+                                <li class="description">- 지식재산권 관련 소송</li>
+                                <li class="description">- 특수 형사 소송 (마약, 성범죄 등)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="inner">
+            <h2 class="logo">
+                <img src="../images/league_logo.png" alt="법률사무소 리그(LEAGUE)">
+            </h2>
+            <ul class="footer-menu">
+                <li><a href="javascript:void(0)" class="privacy">개인정보처리방침</a></li>
+                <li><a href="javascript:void(0)">이메일무단수집거부</a></li>
+            </ul>
+            <div class="company-info">
+                <p><span>법률사무소 리그 (LAW FIRM LEAGUE)</span><span>대표 변호사 : 김동훈</span><span>사업자번호 : 679-42-00499</span></p>
+                <p>주소 : 서울 서초구 서초중앙로 18길 23, 2층 (서초동, 효암빌딩)</p>
+            </div>
+            <p class="copyright">&copy;<span class="year"></span>LAWFIRM LEAGUE ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+    <!-- Top btn -->
+    <div id="to-top">
+        <div class="material-symbols-outlined">arrow_upward</div>
+    </div>
+
+
+</body>
+
+</html>

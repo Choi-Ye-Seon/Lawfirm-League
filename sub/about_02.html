@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>법률사무소 리그</title>
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+
+    <!-- Default CSS -->
+    <link rel="stylesheet" href="../css/default.css">
+    <!-- About CSS -->
+    <link rel="stylesheet" href="../css/about.css">
+
+    <!-- jQuery CDN-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- Default JS -->
+    <script defer src="../js/default.js"></script>
+
+    <!-- Gsap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Lodash JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Google icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="inner">
+            <h1 class="logo">
+                <a href="../index.html">
+                    <img src="../images/league_logo.png" alt="법률사무소 리그(LEAGUE)" class="scroll-on">
+                    <img src="../images/league_logo_white.png" alt="법률사무소 리그(LEAGUE)" class="scroll-off">
+                </a>
+            </h1>
+            <ul class="gnb">
+                <li class="main-menu">
+                    <a href="./about_01.html">로펌소개</a>
+                    <ul class="lnb">
+                        <li><a href="./about_01.html">인사말</a></li>
+                        <li><a href="./about_02.html">오시는길</a></li>
+                    </ul>
+                </li>
+                <li class="main-menu">
+                    <a href="./lawyer.html">변호사소개</a>
+                </li>
+                <li class="main-menu">
+                    <a href="./practice01.html">업무분야</a>
+                    <ul class="lnb">
+                        <li><a href="./practice01.html">성범죄</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">마약</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">형사사건</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">민사·행정</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">기업자문·소송</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">건설·부동산</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">이혼·상속</a></li>
+                        <li><a href="javascript:void(0)" onclick="notice()">특수분야</a></li>
+                    </ul>
+                </li>
+                <li class="main-menu">
+                    <a href="./success.html">성공사례</a>
+                </li>
+                <li class="main-menu">
+                    <a href="./consulation.html">상담신청</a>
+                    <ul class="lnb">
+                        <li><a href="./consulation.html">상담신청</a></li>
+                        <li><a href="./review.html">고객후기</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- PC/Tablet menu open -->
+            <div class="btn--menu">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
+            <div class="clone-menu">
+                <ul class="gnb">
+                    <li class="main-menu">
+                        <a href="javascript:void(0)">
+                            <span>로펌소개</span></a>
+                        <ul class="lnb">
+                            <li><a href="./about_01.html">인사말</a></li>
+                            <li><a href="./about_02.html">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu">
+                        <a href="./lawyer.html">
+                            <span>변호사소개</span></a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="javascript:void(0)">
+                            <span>업무분야</span></a>
+                        <ul class="lnb">
+                            <li><a href="./practice01.html">성범죄</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">마약</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">형사사건</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">민사·행정</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">기업자문·소송</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">건설·부동산</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">이혼·상속</a></li>
+                            <li><a href="javascript:void(0)" onclick="notice()">특수분야</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu">
+                        <a href="./success.html">
+                            <span>성공사례</span></a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="javascript:void(0)"><span>상담신청</span>
+                        </a>
+                        <ul class="lnb">
+                            <li><a href="./consulation.html">상담신청</a></li>
+                            <li><a href="./review.html">고객후기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- //Header -->
+
+    <!-- Sub Visual -->
+    <div class="sub-visual">
+        <div class="inner">
+            <div class="titleBox">
+                <div class="sub-title">ABOUT US</div>
+                <h2 class="title">로펌 소개</h2>
+            </div>
+        </div>
+    </div>
+    <!-- // Sub Visual -->
+
+    <!-- Location -->
+    <section class="location">
+        <div class="inner">
+            <div class="sub titleBox">
+                <div class="sub-title">ABOUT US</div>
+                <h2 class="title">오시는 길</h2>
+            </div>
+            <div class="container">
+                <div class="mapBox">
+                    <!-- * 카카오맵 - 지도퍼가기 -->
+                    <!-- 1. 지도 노드 -->
+                    <div id="daumRoughmapContainer1720191154398" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                    <!--2. 설치 스크립트* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.-->
+                    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                    <!-- 3. 실행 스크립트 -->
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp": "1720191154398",
+                            "key": "2jxi8",
+                            "mapHeight": "360"
+                        }).render();
+                    </script>
+                </div>
+                <div class="textBox">
+                    <ul>
+                        <li class="address">
+                            <p class="sub-title">주소</p>
+                            <p class="description">서울 서초구 서초중앙로 18길 23, 2층 (서초동, 효암빌딩)</p>
+                        </li>
+                        <li class="subway">
+                            <p class="sub-title">지하철 이용 시</p>
+                            <p class="description">지하철 <span class="subway-line">2</span><span class="subway-line">3</span> 교대역 13번 출구에서 도보 3분</p>
+                        </li>
+                        <li class="call">
+                            <p class="sub-title">대표전화</p>
+                            <p class="description">02-6956-5669 (월-금 : 09:00 - 18:00) </p>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //Location -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="inner">
+            <h2 class="logo">
+                <img src="../images/league_logo.png" alt="법률사무소 리그(LEAGUE)">
+            </h2>
+            <ul class="footer-menu">
+                <li><a href="javascript:void(0)" class="privacy">개인정보처리방침</a></li>
+                <li><a href="javascript:void(0)">이메일무단수집거부</a></li>
+            </ul>
+            <div class="company-info">
+                <p><span>법률사무소 리그 (LAW FIRM LEAGUE)</span><span>대표 변호사 : 김동훈</span><span>사업자번호 : 679-42-00499</span></p>
+                <p>주소 : 서울 서초구 서초중앙로 18길 23, 2층 (서초동, 효암빌딩)</p>
+            </div>
+            <p class="copyright">&copy;<span class="year"></span>LAWFIRM LEAGUE ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+    <!-- Top btn -->
+    <div id="to-top">
+        <div class="material-symbols-outlined">arrow_upward</div>
+    </div>
+
+</body>
+
+</html>
