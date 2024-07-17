@@ -15,7 +15,7 @@
 
 .consulation {
     padding: 5.8824em 0;
-    /* background-color: #fff; */
+    background-color: #fff;
 }
 
 .consulation .description {
@@ -48,7 +48,6 @@
 }
 
 .consulation .formBox .personal-info>div {
-    /* border-bottom: 1px solid #05283C; */
     display: flex;
     align-items: center;
     position: relative;

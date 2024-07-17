@@ -161,7 +161,7 @@ header .inner {
 header .logo a {
     position: relative;
     display: block;
-    width: 212px;
+    width: 200px;
     height: var(--header-height);
 }
 
@@ -170,6 +170,7 @@ header .logo a img {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    width: 100%;
 }
 
 header .inner>ul.gnb {
@@ -310,6 +311,12 @@ header .btn--menu {
     }
     header .clone-menu ul.gnb ul.lnb li a:hover {
         text-decoration: underline;
+    }
+}
+
+@media(max-width:720px) {
+    header .logo a {
+        width: 180px;
     }
 }
 
