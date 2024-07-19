@@ -6,6 +6,8 @@
 
 .visual .container {
     position: relative;
+    width: 100%;
+    height: 100vh;
 }
 
 .visual .container::before {
@@ -18,10 +20,30 @@
     background-color: rgba(0, 0, 0, .5);
 }
 
-.visual video {
+.visual .low-power-mode video#background-video {
+    display: none;
+}
+
+.visual .low-power-mode #fallbackImg {
+    display: block;
+}
+
+.visual video#background-video {
     width: 100%;
     height: 100vh;
     object-fit: cover;
+}
+
+.visual #fallbackImg {
+    display: none;
+}
+
+.visual #fallbackImg {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../video/visual_thumb.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .visual .container .titleBox {

@@ -148,9 +148,13 @@
     <!-- Visual -->
     <section class="visual">
         <div class="container">
-            <video id="background-video" autoplay loop muted playsinline poster="./video/visual_thumb.png">
-                 <source src="./video/visual_video.mp4" type="video/mp4">
-            </video>
+            <div id="videoContainer">
+                <video id="background-video" autoplay loop muted playsinline poster="./video/visual_thumb.png">
+                    <source src="./video/visual_video.mp4" type="video/mp4">
+               </video>
+                <div id="fallbackImg"></div>
+            </div>
+
             <div class="titleBox">
                 <h2>당신의 든든한 법률 동반자로서<br> 끝까지 함께 하겠습니다.</h2>
                 <img src="./images/league_logo_white.png" alt="법률사무소 리그(LEAGUE)">
