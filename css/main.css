@@ -52,24 +52,40 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    max-width: 1200px;
+    padding: 0 10px 3.5294em 10px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
+    text-align: right;
+}
+
+.visual .container .titleBox .sitename {
+    color: rgba(255, 255, 255, .6);
+    border: solid rgba(255, 255, 255, .6);
+    border-width: 1px 0 1px 0;
+    padding: 0.625em;
 }
 
 .visual .container .titleBox h2 {
-    font-size: 44px;
-    color: var(--font-point);
+    font-size: 2.3529rem;
+    color: var(--font-white);
     line-height: 1.5;
-    text-align: center;
-    font-weight: 700;
-    padding-bottom: 0.75em;
+    padding-top: 0.25em;
     /*33px*/
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, .6);
+    /* text-shadow: 1px 1px 4px rgba(0, 0, 0, .6); */
+}
+
+.visual .container .titleBox h3 {
+    font-size: 2.5882rem;
+    color: var(--font-white);
+    line-height: 1.5;
+    font-weight: 600;
 }
 
 .visual .container .titleBox img {
-    width: 212px;
+    width: 200px;
 }
 
 .visual .container .scroll-animation {
@@ -112,7 +128,6 @@
 
 @media (max-width:980px) {
     .visual .container .titleBox h2 {
-        font-size: 34px;
         word-break: keep-all;
     }
     .visual .container .titleBox img {
@@ -122,10 +137,10 @@
 
 @media (max-width:460px) {
     .visual .container .titleBox h2 {
-        font-size: 30px;
+        font-size: 1.8750rem;
     }
-    .visual .container .titleBox h2 br {
-        display: none;
+    .visual .container .titleBox h3 {
+        font-size: 2.1875rem;
     }
     .visual .container .titleBox img {
         width: 160px;
@@ -272,6 +287,10 @@
 
 .practice .container .itemBox .icon {
     padding-bottom: 20px;
+}
+
+.practice .container .itemBox .icon img {
+    width: 50px;
 }
 
 .practice .container .itemBox .item-title {
