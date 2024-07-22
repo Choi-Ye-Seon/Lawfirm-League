@@ -1101,6 +1101,7 @@
     padding-bottom: 1.7647em;
     padding-left: 40px;
     background-repeat: no-repeat;
+    background-size: 32px;
 }
 
 .location .textBox li:last-child {
@@ -1113,8 +1114,8 @@
 
 .location .textBox li.call {
     background-image: url(../images/call.png);
-    background-size: 26px;
     background-position: top 2px left;
+    background-size: 30px;
 }
 
 .location .textBox li.subway {
