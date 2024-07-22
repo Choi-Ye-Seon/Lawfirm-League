@@ -320,6 +320,12 @@ header .btn--menu {
     }
 }
 
+@media(max-width:460px) {
+    header .logo a {
+        width: 140px;
+    }
+}
+
 
 /* //Header */
 
@@ -409,6 +415,10 @@ footer .inner {
     align-items: center;
 }
 
+footer .logo img {
+    width: 200px;
+}
+
 footer .footer-menu {
     display: flex;
     gap: 40px;
@@ -447,6 +457,18 @@ footer .copyright {
 
 footer .copyright .year {
     padding-right: 0.3571em;
+}
+
+@media(max-width:720px) {
+    footer .logo img {
+        width: 180px;
+    }
+}
+
+@media(max-width:460px) {
+    footer .logo img {
+        width: 140px;
+    }
 }
 
 
