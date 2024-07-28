@@ -287,8 +287,8 @@
 }
 
 .success .swiper-slide .caseBox .description {
-    font-size: 0.8824rem;
-    padding-top: 1.3333em;
+    font-size: 15px;
+    padding-top: 20px;
     word-break: normal;
     display: -webkit-box;
     -webkit-line-clamp: 5;

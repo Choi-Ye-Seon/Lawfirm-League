@@ -122,8 +122,8 @@
 }
 
 .success-story .tab-con .content .description {
-    font-size: 0.8824rem;
-    padding-top: 1.3333em;
+    font-size: 15px;
+    padding-top: 20px;
     word-break: normal;
     display: -webkit-box;
     -webkit-line-clamp: 5;
@@ -257,12 +257,12 @@
 
 .success-view .content ul li h3 {
     font-weight: 500;
-    padding-bottom: 0.5882em;
+    padding-bottom: 10px;
     font-size: 1.0588rem;
 }
 
 .success-view .content .description {
-    font-size: 0.9412rem;
+    font-size: 15px;
     word-break: keep-all;
     color: var(--description);
 }

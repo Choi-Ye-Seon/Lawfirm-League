@@ -70,6 +70,7 @@
     width: 78%;
     padding: 0 7px;
     background-color: #fff;
+    color: var(--font-main);
     border: 1px solid #ddd;
     outline: none;
     box-sizing: border-box;
@@ -125,11 +126,11 @@ select {
 
 .consulation .agreeBox label {
     width: auto;
-    font-size: 0.8235rem;
+    font-size: 14px;
 }
 
 .consulation .agreeBox a {
-    font-size: 0.8235rem;
+    font-size: 14px;
     color: #777;
     text-decoration: underline;
 }
@@ -145,6 +146,7 @@ select {
 .consulation .btnBox input {
     border: none;
     background-color: #05283C;
+    border-radius: 0;
     font-size: 1rem;
     padding: 0 3.5294em;
     height: 50px;

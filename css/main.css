@@ -488,8 +488,8 @@
 }
 
 .success .swiper-slide .caseBox .description {
-    font-size: 0.8824rem;
-    padding-top: 1.3333em;
+    font-size: 15px;
+    padding-top: 20px;
     word-break: normal;
     display: -webkit-box;
     -webkit-line-clamp: 5;
@@ -805,12 +805,12 @@
 
 .consulation .agreeBox label {
     width: auto;
-    font-size: 0.8235rem;
+    font-size: 14px;
     color: var(--font-white);
 }
 
 .consulation .agreeBox a {
-    font-size: 0.8235rem;
+    font-size: 14px;
     color: rgba(255, 255, 255, .4);
     text-decoration: underline;
 }
@@ -1127,9 +1127,9 @@
 
 .post .itemBox .headline .date .yy-mm {
     color: var(--font-lightgray);
-    font-size: 0.8824rem;
+    font-size: 15px;
     font-weight: 300;
-    padding-bottom: 0.2667em;
+    padding-bottom: 4px;
     text-align: right;
 }
 
@@ -1141,9 +1141,9 @@
 }
 
 .post .itemBox .sub-title {
-    font-size: 0.8824rem;
+    font-size: 15px;
     color: var(--font-lightgray);
-    padding-bottom: 0.2667em;
+    padding-bottom: 4px;
 }
 
 .post .itemBox .thumbBox {
@@ -1195,7 +1195,7 @@
 }
 
 .post .itemBox .textBox .description {
-    font-size: 0.8824rem;
+    font-size: 15px;
     padding-top: 1em;
     display: -webkit-box;
     -webkit-line-clamp: 4;
