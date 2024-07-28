@@ -195,6 +195,7 @@
 
 .about .description p {
     padding-bottom: 1em;
+    color: var(--font-main);
 }
 
 .about .sign {
@@ -680,6 +681,7 @@
 
 .consulation li.call span.label {
     padding-top: 2px;
+    font-weight: 600;
 }
 
 .consulation li span.number {
@@ -690,7 +692,7 @@
 .consulation li.kakao a {
     display: flex;
     align-items: center;
-    gap: 26px;
+    gap: 20px;
     color: var(--font-white);
 }
 
@@ -735,7 +737,7 @@
 .consulation .formBox select,
 .consulation .formBox textarea {
     width: 65%;
-    /* background-color: #999; */
+    border-radius: 0;
     background-color: transparent;
     border: none;
     outline: none;
