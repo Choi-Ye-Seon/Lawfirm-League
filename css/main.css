@@ -745,6 +745,13 @@
     font-family: 'Pretendard Variable', sans-serif;
 }
 
+.consulation .formBox input:focus,
+.consulation .formBox select:focus,
+.consulation .formBox textarea:focus {
+    background: #fff;
+    color: #272727;
+}
+
 .consulation .formBox select option {
     color: var(--font-main);
 }
@@ -767,6 +774,7 @@
     width: 100%;
     height: 100px;
     padding: 10px;
+    margin-top: 12px;
 }
 
 .consulation select {
@@ -858,6 +866,7 @@
 
 .consulation #overlayer .content li {
     padding-bottom: 1rem;
+    display: block;
 }
 
 .consulation #overlayer .content li:last-child {
