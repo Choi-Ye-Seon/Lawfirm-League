@@ -834,6 +834,7 @@
     font-family: 'Pretendard Variable', sans-serif;
     color: var(--font-white);
     font-weight: 500;
+    border-radius: 0;
 }
 
 .consulation #bglayer {
