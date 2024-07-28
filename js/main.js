@@ -24,50 +24,35 @@ video.play().catch(error => {
 
 
 $(document).ready(function() {
-    // 성공사례 탭메뉴
-    $('.success .tab-menu').click(function() {
-        $(this).addClass("on");
-        $(this).siblings().removeClass("on");
-        let idx = $(this).index();
 
-        $(this).parent().parent().siblings(".tab-con").removeClass("view");
-        $(this).parent().parent().siblings(".tab-con").eq(idx).addClass("view");
-    });
 
     // 리그포스트 탭메뉴
     $('.post .post-menu .tab-menu').click(function() {
         $(this).addClass("on");
         $(this).siblings().removeClass("on");
         let idxNum = $(this).index();
-        $(this).parent().parent().parent().siblings(".tab-con").removeClass("view");
-        $(this).parent().parent().parent().siblings(".tab-con").eq(idxNum).addClass("view");
+        $(this).parent().parent().siblings(".tab-con").removeClass("view");
+        $(this).parent().parent().siblings(".tab-con").eq(idxNum).addClass("view");
     });
 });
 
 
 // 성공사례 Swiper JS
-new Swiper('.success .swiper.success-menu', {
-    slidesPerView: "auto",
-    spaceBetween: 14,
-    grapCursor: true
-        // grap, breakpoint 추가하기
-});
-
-
-new Swiper('.success .tab-con .swiper', {
+new Swiper('.success  .swiper', {
     slidesPerView: 1,
     // slidesPerGroup: 3,
     spaceBetween: 12,
-    navigation: {
-        nextEl: '.success .swiper-button-next',
-        prevEl: '.success .swiper-button-prev',
+    pagination: {
+        el: ".success .swiper-pagination",
+        clickable: true
     },
     breakpoints: {
         460: {
             slidesPerView: 2,
             spaceBetween: 16
         },
-        720: {
+
+        980: {
             slidesPerView: 3,
             spaceBetween: 20
         }
@@ -78,35 +63,35 @@ new Swiper('.success .tab-con .swiper', {
 // 리그포스트 Swiper JS
 new Swiper('.post .swiper.post-menu', {
     slidesPerView: "auto",
-    spaceBetween: 14,
+    spaceBetween: 40,
     grapCursor: true,
-    // 태블릿, 모바일 기기에서는 가로정렬, grab
     breakpoints: {
         980: {
-            direction: "vertical",
-            spaceBetween: 24,
-
+            spaceBetween: 40,
         }
     }
 });
 
 new Swiper('.post .tab-con .swiper', {
-    slidesPerView: "auto",
-    spaceBetween: 12,
+    slidesPerView: 1,
+    spaceBetween: 20,
     pagination: {
         el: ".post .swiper-pagination",
+        clickable: true
     },
-    navigation: {
-        nextEl: '.post .swiper-button-next',
-        prevEl: '.post .swiper-button-prev',
-    },
+
     breakpoints: {
         460: {
-            spaceBetween: 16,
-
+            slidesPerView: 2,
+            spaceBetween: 16
         },
         720: {
-            spaceBetween: 20,
+            slidesPerView: 3,
+            spaceBetween: 20
+        },
+        980: {
+            slidesPerView: 4,
+            spaceBetween: 20
         }
     }
 });
@@ -137,5 +122,34 @@ overlayerEl.addEventListener('click', function(event) {
 bglayerEl.addEventListener('click', function() {
     bglayerEl.classList.remove('show')
     document.documentElement.classList.remove('fixed');
+
+});
+
+
+// 클라이언트 Swiper JS
+new Swiper('.clients .swiper', {
+    slidesPerView: 3,
+    spaceBetween: 55,
+    navigation: {
+        nextEl: '.clients .swiper-button-next',
+        prevEl: '.clients .swiper-button-prev',
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+    },
+    loop: true,
+    breakpoints: {
+
+        420: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+        },
+        840: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+
+        }
+    }
 
 });

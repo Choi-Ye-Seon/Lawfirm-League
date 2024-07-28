@@ -44,6 +44,10 @@
     padding-bottom: 3.5294em;
 }
 
+.practice .info .thumbBox img {
+    width: 100%;
+}
+
 .practice .info .textBox {
     display: flex;
     gap: 60px;
@@ -97,7 +101,6 @@
 
 .practice .process {
     background-image: url(../images/process_bg.png);
-    background-position: top right;
     background-size: cover;
     position: relative;
 }
@@ -158,13 +161,25 @@
     padding-bottom: 0.6250em;
 }
 
+
+/* 
+.practice .itemBox.step01 {
+    background-image: url(../images/process_icon01.svg);
+    background-repeat: no-repeat;
+    background-size: 64px;
+} */
+
 .practice .itemBox .title {
     color: var(--font-white);
     font-size: 1.0588rem;
-    padding-bottom: 0.7778em;
+    padding-bottom: 1em;
     /* font-weight: 500; */
     word-break: keep-all;
     text-align: center;
+}
+
+.practice li.itemBox img {
+    width: 64px;
 }
 
 .practice .arrow {
@@ -172,13 +187,10 @@
 }
 
 @media(max-width: 980px) {
-    .practice ul.container {}
-    /* .practice ul.container:last-child {
-        justify-content: start;
-    } */
-    /* .practice li.itemBox {
-        flex-shrink: 1;
-    } */
+    .practice .info .textBox {
+        flex-direction: column;
+        gap: 2em;
+    }
 }
 
 @media(max-width: 760px) {
@@ -224,29 +236,28 @@
     content: '03';
 }
 
-.practice .success .swiper {
-    padding: 16px 0 60px;
+.success .swiper {
+    padding: 16px 0 3.5294em;
 }
 
-.practice .success .swiper-slide .slideBox {
+.success .swiper-slide {
+    padding-top: 37px;
+    background-color: #fff;
     border: 1px solid #ddd;
     box-sizing: border-box;
-    transition: all .2s;
+    display: block;
+    transition: .3s;
 }
 
-.practice .success .swiper-slide .slideBox:hover {
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+.success .swiper-slide:hover {
     border-color: #05283C;
 }
 
-.practice .success .swiper-slide .slideBox a {
-    padding: 37px 30px 40px;
-    background-color: #fff;
-    box-sizing: border-box;
-    display: block;
+.success .swiper-slide .caseBox {
+    padding: 0 30px;
 }
 
-.practice .success .swiper-slide .category {
+.success .swiper-slide .category {
     background-color: #05283C;
     display: inline-block;
     padding: 8px 20px;
@@ -256,29 +267,66 @@
     left: 30px;
 }
 
-.practice .success .swiper-slide .legal-title {
+.success .swiper-slide .caseBox .legal-title {
     font-size: 1.1765rem;
     font-weight: 600;
     color: #05283C;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.practice .success .swiper-slide .legal-result {
+.success .swiper-slide .caseBox .legal-result {
     font-size: 1rem;
     padding: 0.9412em 0 1.1765em;
-    color: #999;
+    color: #777;
     border-bottom: 1px solid #ddd;
 }
 
-.practice .success .swiper-slide .description {
+.success .swiper-slide .caseBox .description {
     font-size: 0.8824rem;
     padding-top: 1.3333em;
     word-break: normal;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     color: var(--description);
+}
+
+.success .swiper-slide .profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 1.1765em 30px;
+    margin-top: 1.1765em;
+    background-color: #f5f5f5;
+    /* border-top: 1px solid #ddd; */
+}
+
+.success .swiper-slide .profile .photo {
+    width: 54px;
+    height: 54px;
+    border-radius: 100px;
+    background-color: #ddd;
+    background-size: cover;
+}
+
+.success .swiper-slide .profile .photo.lawyer01 {
+    background-image: url(../images/small_lawyer01.png);
+}
+
+.success .swiper-slide .profile .textBox .sitename {
+    font-size: 0.7647rem;
+}
+
+.success .swiper-slide .profile .textBox .name {
+    color: var(--font-main);
+    font-weight: 500;
 }
 
 .practice .success .swiper-button-prev::after,
@@ -314,6 +362,10 @@
     /* font-size: 14px;
     color: #05283c; */
     margin-top: 0;
+}
+
+.practice .success .btnBox {
+    padding-top: 3.5294em;
 }
 
 @media (max-width:460px) {

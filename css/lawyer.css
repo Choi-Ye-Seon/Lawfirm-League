@@ -81,18 +81,17 @@
 }
 
 .lawyer .lawyerBox .nameBox {
+    color: var(--font-white);
+    width: 100%;
+    padding: 1.1765em 0.7059em;
+    line-height: 1.3;
+    word-break: keep-all;
+    box-sizing: border-box;
+    text-align: center;
     position: absolute;
     bottom: 0;
     left: 0;
     background-color: rgba(5, 40, 60, .8);
-}
-
-.lawyer .lawyerBox .nameBox {
-    color: var(--font-white);
-    width: 100%;
-    padding: 1.1765em 0.7059em;
-    box-sizing: border-box;
-    text-align: center;
 }
 
 .lawyer .lawyerBox .nameBox .name {
@@ -102,9 +101,6 @@
 }
 
 @media (max-width:980px) {
-    .lawyer .container {
-        grid-gap: 16px;
-    }
     .lawyer .lawyerBox .nameBox .name {
         font-size: 1.1765rem;
     }
@@ -114,22 +110,17 @@
     .lawyer .container {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
+        grid-gap: 16px;
     }
 }
 
 @media (max-width:460px) {
     .lawyer .container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+    .lawyer .container {
         grid-gap: 12px;
-    }
-    .lawyer .lawyerBox .nameBox {
-        word-break: keep-all;
-        line-height: 1.3;
-    }
-    .lawyer .lawyerBox .nameBox {
-        font-size: 0.8750rem;
-    }
-    .lawyer .lawyerBox .nameBox .name {
-        font-size: 1rem;
     }
 }
 
@@ -141,6 +132,10 @@
     align-items: start;
     gap: 60px;
     margin-bottom: 130px;
+}
+
+.lawyer .lawyer-info.container:last-child {
+    margin-bottom: 0;
 }
 
 .lawyer .lawyer-info .lawyerBox {
@@ -213,5 +208,11 @@
     }
     .lawyer .lawyer-info .lawyerBox {
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 720px) {
+    .lawyer .lawyer-info.container {
+        margin-bottom: 100px;
     }
 }
