@@ -7,11 +7,11 @@
     <title>법률사무소 리그</title>
 
     <!-- 메타태그 -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="법률사무소 리그" />
-    <meta property="og:title" content="법률사무소 리그" />
-    <meta property="og:description" content="당신의 든든한 법률 동반자로서 법률사무소 리그(LEAGUE)가 함께 하겠습니다." />
-    <meta property="og:image" content="./images/ogimg.png" />
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="법률사무소 리그">
+    <meta property="og:title" content="법률사무소 리그">
+    <meta property="og:description" content="당신의 든든한 법률 동반자로서 법률사무소 리그(LEAGUE)가 함께 하겠습니다.">
+    <meta property="og:image" content="./images/ogimg.png">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
@@ -35,11 +35,11 @@
     <script defer src="./js/main.js"></script>
 
     <!-- Swiper JS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Google icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 
     <!-- Gsap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -159,7 +159,6 @@
             <div class="titleBox">
                 <div class="sitename">Law Firm League</div>
                 <h2>당신의 든든한 법률파트너<br><span>법률사무소 리그</span></h2>
-                <!-- <img src="./images/league_logo_white.png" alt="법률사무소 리그(LEAGUE)"> -->
             </div>
             <div class="scroll-animation">
                 <h3>SCROLL</h3>
@@ -167,6 +166,7 @@
         </div>
     </section>
     <!-- //Visual -->
+
     <!-- About Us -->
     <section class="about">
         <div class="inner">
@@ -353,11 +353,6 @@
                         </a>
                     </div>
                     <div class="swiper-pagination"></div>
-                    <!-- Add Arrows -->
-                    <!-- <div class="arrowBox">
-                            <div class="swiper-button-prev"><img src="./images/prev_btn.png" alt="이전으로">Prev</div>
-                            <div class="swiper-button-next">Next<img src="./images/next_btn.png" alt="다음으로"></div>
-                        </div> -->
                 </div>
             </div>
             <div class="btnBox">
@@ -367,7 +362,6 @@
     </section>
     <!-- //Success story -->
 
-
     <!-- Consultation -->
     <section class="consulation">
         <div class="inner">
@@ -375,7 +369,6 @@
                 <div class="sitename">Law Firm League</div>
                 <h2 class="title">상담 신청</h2>
             </div>
-
             <div class="wrap">
                 <div class="textBox">
                     <div class="description">
@@ -404,7 +397,6 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="container">
                     <div class="formBox">
                         <div>
@@ -479,7 +471,7 @@
     <!-- //Consultation -->
 
 
-    <!-- Location 지도 크기 보류-->
+    <!-- Location 지도 보류!!!!!!!-->
     <section class="location">
         <div class="inner">
             <div class="titleBox">
@@ -487,16 +479,11 @@
                 <h2 class="title">오시는 길</h2>
             </div>
             <div class="container">
+                <!-- 카카오맵 -->
                 <div class="mapBox">
-                    <!-- * 카카오맵 - 지도퍼가기 -->
-                    <!-- 1. 지도 노드 -->
                     <div id="daumRoughmapContainer1720191154398" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-
-                    <!--2. 설치 스크립트* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.-->
-                    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-                    <!-- 3. 실행 스크립트 -->
-                    <script charset="UTF-8">
+                    <script class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                    <script>
                         new daum.roughmap.Lander({
                             "timestamp": "1720191154398",
                             "key": "2jxi8",
@@ -504,6 +491,7 @@
                         }).render();
                     </script>
                 </div>
+                <!-- //카카오맵 -->
                 <div class="textBox">
                     <ul>
                         <li class="address">
@@ -518,15 +506,12 @@
                             <p class="sub-title">대표전화</p>
                             <p class="description">02-6956-5669 (월-금 : 09:00 - 18:00) </p>
                         </li>
-
-
                     </ul>
                 </div>
             </div>
-
         </div>
     </section>
-    <!-- //Location 지도 크기 보류-->
+    <!-- //Location 지도 보류!!!!!!!-->
 
     <!-- Post -->
     <section class="post">
@@ -535,7 +520,6 @@
                 <div class="sitename">Law Firm League</div>
                 <h2 class="title">리그 포스트</h2>
             </div>
-
             <div class=" swiper post-menu">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide tab-menu on">알아두면 쓸모있는 법률이야기</div>
@@ -854,14 +838,13 @@
                 </div>
             </div>
         </div>
-
-        <!-- //Post -->
     </section>
     <!-- //Post -->
 
     <!-- Clients -->
     <section class="clients">
         <div class="inner">
+            <h2 class="hidden">고객사</h2>
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">

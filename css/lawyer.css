@@ -10,9 +10,11 @@
 
 /* //Sub Visual */
 
+
+/* 변호사 목록 */
+
 .lawyer {
     padding: 5.8824em 0;
-    /*100*/
 }
 
 .lawyer .container {
@@ -125,6 +127,9 @@
 }
 
 
+/* //변호사 목록 */
+
+
 /* 변호사 소개 - lawyer-info */
 
 .lawyer .lawyer-info.container {
@@ -212,3 +217,6 @@
         margin-bottom: 100px;
     }
 }
+
+
+/* 변호사 소개 - lawyer-info */

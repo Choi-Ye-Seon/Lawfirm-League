@@ -21,6 +21,7 @@
 .consulation .description {
     text-align: left;
     padding-bottom: 3.5294em;
+    color: var(--font-main);
 }
 
 .consulation .description p:last-child {
@@ -99,10 +100,12 @@
 }
 
 select {
+    /* select 기본 css 초기화 */
     -moz-appearance: none;
     /* Firefox */
     -webkit-appearance: none;
     /* Safari and Chrome */
+    /* //select 기본 css 초기화 */
     appearance: none;
     background-image: url(../images/arrow_hide.png);
     background-repeat: no-repeat;
@@ -136,8 +139,6 @@ select {
 }
 
 .consulation .btnBox {
-    border: none;
-    padding: none;
     text-align: center;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -384,6 +385,8 @@ select {
 .review .container .itemBox .textBox .description {
     font-size: 15px;
     padding-top: 1em;
+    min-height: 99px;
+    box-sizing: border-box;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
@@ -444,6 +447,11 @@ select {
     font-size: 0.9412rem;
     padding: 2.5em;
     box-sizing: border-box;
+}
+
+.review-view .article .thumbBox {
+    font-size: 0.9412rem;
+    padding: 0 2.5em;
 }
 
 .review-view .btnWrap {

@@ -63,6 +63,7 @@
 
 .about .introduce .description p {
     padding-bottom: 1em;
+    color: var(--font-main);
 }
 
 .about .introduce .sign {
@@ -100,13 +101,11 @@
 .about .league li {
     display: flex;
     flex-direction: column;
-    /* background-color: rgba(255, 255, 255, .25); */
     border: 1px solid #ddd;
     border-top: 6px solid #05283C;
     padding: 30px 34px;
     box-sizing: border-box;
     cursor: default;
-    /* color: var(--font-white); */
 }
 
 .about .league li .icon {
@@ -167,6 +166,7 @@
 
 .about .league li p {
     line-height: 1.5;
+    color: var(--font-main);
 }
 
 .about .league li.large--logo {
@@ -239,11 +239,18 @@
 }
 
 
+/* //About - league */
+
+
 /* Clients */
 
 .clients {
     padding: 24px 0;
     border-top: 1px solid #ddd;
+}
+
+.clients h2 {
+    display: none;
 }
 
 .clients .swiper-slide img {
@@ -256,6 +263,9 @@
         width: 90px;
     }
 }
+
+
+/* //Clients */
 
 
 /* // 인사말 */
@@ -361,6 +371,9 @@
         gap: 40px;
     }
 }
+
+
+/* Location */
 
 
 /* // Location */

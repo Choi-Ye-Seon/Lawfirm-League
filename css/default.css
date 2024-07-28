@@ -57,12 +57,12 @@ body {
     overflow-x: hidden;
 }
 
-a[href^="tel"] {
-    color: inherit;
+a {
     text-decoration: none;
 }
 
-a {
+a[href^="tel"] {
+    color: inherit;
     text-decoration: none;
 }
 
@@ -219,6 +219,9 @@ header .logo a img {
     width: 100%;
 }
 
+
+/* Header - GNB */
+
 header .inner>ul.gnb {
     display: flex;
 }
@@ -248,12 +251,14 @@ header .inner>ul.gnb li.main-menu:hover::before {
     left: 0;
 }
 
+
+/* Header - LNB */
+
 header .inner>ul.gnb ul.lnb {
     position: absolute;
     width: 100%;
     top: var(--header-height);
     left: 0;
-    /* padding: 12px 0; */
     background-color: #fff;
     display: none;
 }
@@ -279,6 +284,7 @@ header .btn--menu {
     header .inner>ul.gnb {
         display: none;
     }
+    /* 모바일 menu */
     header .btn--menu {
         display: flex;
         flex-direction: column;
@@ -343,7 +349,6 @@ header .btn--menu {
     }
     header .clone-menu ul.gnb li.main-menu>a span {
         font-size: 1.4118rem;
-        /*24*/
         padding: 24px 30px;
         display: inline-block;
         font-weight: 500;

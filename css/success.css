@@ -14,6 +14,12 @@
     padding: 5.8824em 0;
 }
 
+
+/* 성공사례 목록 */
+
+
+/* 탭메뉴 */
+
 .success-story .success-menu ul {
     display: flex;
     justify-content: center;
@@ -51,6 +57,9 @@
         justify-content: start;
     }
 }
+
+
+/* //탭메뉴 */
 
 .success-story .tab-con {
     display: none;
@@ -124,6 +133,8 @@
 .success-story .tab-con .content .description {
     font-size: 15px;
     padding-top: 20px;
+    min-height: 125px;
+    box-sizing: border-box;
     word-break: normal;
     display: -webkit-box;
     -webkit-line-clamp: 5;
@@ -140,7 +151,6 @@
     padding: 1.1765em 30px;
     margin-top: 1.1765em;
     background-color: #f5f5f5;
-    /* border-top: 1px solid #ddd; */
 }
 
 .success-story .tab-con .content .profile .photo {
@@ -193,6 +203,9 @@
     font-weight: 500;
     color: var(--font-main);
 }
+
+
+/* //성공사례 목록 */
 
 
 /* 성공사례 보기페이지 */
@@ -307,3 +320,6 @@
         width: 100%;
     }
 }
+
+
+/* 성공사례 보기페이지 */

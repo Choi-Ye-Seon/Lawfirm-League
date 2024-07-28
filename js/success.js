@@ -20,5 +20,4 @@ new Swiper('.success-story .swiper.success-menu', {
     slidesPerView: "auto",
     spaceBetween: 14,
     grapCursor: true
-        // grap, breakpoint 추가하기
 });
