@@ -171,27 +171,23 @@
     position: absolute;
     content: '';
     width: 4px;
-    height: 16px;
+    height: 18px;
     top: 0;
     left: 0;
     background-color: #272727;
 }
 
 .lawyer .lawyer-info .textBox .title {
-    font-size: 1.0588rem;
+    font-size: 1.1765rem;
     font-weight: 500;
     position: relative;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.7em;
 }
 
 .lawyer .lawyer-info .textBox ul.career {
     display: flex;
     flex-direction: column;
     gap: 6px;
-}
-
-.lawyer .lawyer-info .textBox .description {
-    font-size: 0.9412rem;
 }
 
 #lawyer01,

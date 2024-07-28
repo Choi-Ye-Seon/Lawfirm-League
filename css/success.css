@@ -249,7 +249,7 @@
     position: absolute;
     content: '';
     width: 4px;
-    height: 16px;
+    height: 18px;
     top: 0;
     left: 0;
     background-color: #272727;
@@ -257,14 +257,13 @@
 
 .success-view .content ul li h3 {
     font-weight: 500;
-    padding-bottom: 10px;
-    font-size: 1.0588rem;
+    padding-bottom: 0.7em;
+    font-size: 1.1765rem;
 }
 
 .success-view .content .description {
-    font-size: 15px;
     word-break: keep-all;
-    color: var(--description);
+    line-height: 1.5;
 }
 
 .success-view .content .thumbBox {

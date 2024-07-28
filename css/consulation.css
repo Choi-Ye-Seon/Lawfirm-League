@@ -56,7 +56,6 @@
 
 .consulation .formBox label {
     width: 22%;
-    font-size: 0.9412rem;
 }
 
 .consulation .formBox input,
@@ -76,6 +75,7 @@
     box-sizing: border-box;
     font-size: 0.9412rem;
     font-family: 'Pretendard Variable', sans-serif;
+    border-radius: 0;
 }
 
 .consulation .formBox select option {
@@ -382,14 +382,13 @@ select {
 }
 
 .review .container .itemBox .textBox .description {
-    font-size: 0.8824rem;
+    font-size: 15px;
     padding-top: 1em;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: var(--description);
     word-break: normal;
 }
 
