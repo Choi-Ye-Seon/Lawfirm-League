@@ -8,15 +8,21 @@ function isMobileDevice() {
 }
 
 // 모바일 저전력모드 함수선언
+const userLowPowerMode = false;
+
 function lowPowerMode() {
-    if (isMobileDevice()) {
-        videoContainer.classList.add('low-power-mode');
+    if (navigator.getBattery) {
+        navigator.getBattery().then(function(battery) {
+            if (battery.level < 0.2 || battery.charging === false || userLowPowerMode) {
+                videoContainer.classList.add('low-power-mode');
+            } else {
+                videoContainer.classList.remove('low-power-mode');
+            }
+        });
     }
 }
 
-function videoPlay() {
-    videoContainer.classList.remove('low-power-mode');
-}
+
 
 
 
@@ -28,6 +34,14 @@ async function attemptPlay() {
         console.error('자동재생실패:', error);
         lowPowerMode();
     }
+}
+
+function attemptPlayMobile() {
+    attemptPlay();
+}
+
+function attemptPlayDesktop() {
+    attemptPlay();
 }
 
 // 비디오 데이터 로드
@@ -44,4 +58,9 @@ video.addEventListener('play', videoPlay);
 video.addEventListener('suspend', lowPowerMode);
 
 // 비디오 자동재생
-attemptPlay();
+
+if (isMobileDevice()) {
+    attemptPlayMobile();
+} else {
+    attemptPlayDesktop();
+}
