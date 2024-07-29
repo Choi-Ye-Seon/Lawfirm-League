@@ -1,23 +1,47 @@
 // Visual Video
-const video = document.getElementById('background-video')
-const videoContainer = document.getElementById('videoContainer')
+const video = document.getElementById('background-video');
+const videoContainer = document.getElementById('videoContainer');
+
+// 모바일 디바이스 판별
+function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
 
 // 모바일 저전력모드 함수선언
 function lowPowerMode() {
-    videoContainer.classList.add('low-power-mode');
+    if (isMobileDevice()) {
+        videoContainer.classList.add('low-power-mode');
+    }
 }
 
 function videoPlay() {
     videoContainer.classList.remove('low-power-mode');
 }
 
-// 모바일 저전력모드 함수실행
-// video 일시 중지 시, low-power-mode 클래스 추가
-video.addEventListener('suspend', lowPowerMode);
-// video 재생 시, low-power-mode 클래스 제거
-video.addEventListener('play', videoPlay);
 
-// 저전력모드 감시
-video.play().catch(error => {
-    lowPowerMode();
+
+// 비디오 자동재생을 위한 함수선언
+async function attemptPlay() {
+    try {
+        await video.play();
+    } catch (error) {
+        console.error('자동재생실패:', error);
+        lowPowerMode();
+    }
+}
+
+// 비디오 데이터 로드
+video.addEventListener('loadeddata', async function() {
+    try {
+        await video.play();
+    } catch (error) {
+        console.error('자동재생실패:', error);
+        lowPowerMode();
+    }
 });
+
+video.addEventListener('play', videoPlay);
+video.addEventListener('suspend', lowPowerMode);
+
+// 비디오 자동재생
+attemptPlay();
