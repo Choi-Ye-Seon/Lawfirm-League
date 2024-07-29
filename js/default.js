@@ -190,6 +190,23 @@ window.addEventListener('resize', function() {
 });
 
 
+// ScrollMagic
+const spyEls = document.querySelectorAll('section .scroll-spy')
+
+spyEls.forEach(function(spyEl) {
+    const scene = new ScrollMagic
+        .Scene({
+            triggerElement: spyEl,
+            triggerHook: .85
+        })
+        .on('enter', function() {
+            spyEl.classList.add('show');
+        })
+        .on('leave', function() {
+            spyEl.classList.remove('show');
+        })
+        .addTo(new ScrollMagic.Controller());
+});
 
 // Copyright
 const yearEl = document.querySelector('footer .year');

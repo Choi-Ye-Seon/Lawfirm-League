@@ -77,13 +77,6 @@ img {
     position: relative;
 }
 
-
-/* @media(max-width:980px) {
-    .inner {
-        padding: 0 15px;
-    }
-} */
-
 .sitename {
     font-size: 0.9412rem;
     color: var(--font-lightgray);
@@ -190,6 +183,39 @@ img {
     border-radius: 20px;
     background-color: #05283C;
 }
+
+
+/* ScrollMagic */
+
+.scroll-spy {
+    transform: translate(0, 120px);
+    transition: .7s;
+}
+
+.scroll-spy.show {
+    transform: translate(0, 0);
+}
+
+.back-to-position {
+    opacity: 0;
+    transition: .7s;
+}
+
+.back-to-position.to-right {
+    transform: translateX(-150px);
+}
+
+.back-to-position.to-left {
+    transform: translateX(150px);
+}
+
+.scroll-spy.show .back-to-position {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* //ScrollMagic */
 
 
 /* // 공통 */
