@@ -197,7 +197,7 @@ spyEls.forEach(function(spyEl) {
     const scene = new ScrollMagic
         .Scene({
             triggerElement: spyEl,
-            triggerHook: .85
+            triggerHook: .75
         })
         .on('enter', function() {
             spyEl.classList.add('show');
