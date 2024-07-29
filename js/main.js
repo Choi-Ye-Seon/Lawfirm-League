@@ -63,10 +63,6 @@ new Swiper('.post .tab-con .swiper', {
         720: {
             slidesPerView: 3,
             spaceBetween: 20
-        },
-        980: {
-            slidesPerView: 4,
-            spaceBetween: 20
         }
     }
 });

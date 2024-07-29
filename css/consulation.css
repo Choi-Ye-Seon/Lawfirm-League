@@ -410,10 +410,16 @@ select {
     padding: 8px 0;
 }
 
-@media (max-width:720px) {
+@media (max-width:980px) {
     .review .container {
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 16px;
+        grid-gap: 20px;
+    }
+}
+
+@media (max-width:720px) {
+    .review .container .itemBox {
+        padding: 30px 22px;
     }
 }
 

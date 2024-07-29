@@ -304,10 +304,25 @@
     padding: 8px 0;
 }
 
-@media (max-width:720px) {
+@media (max-width:980px) {
     .success-story .tab-con .container {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 40px 20px;
+    }
+    .success-story .tab-con .content {
+        max-width: none;
+    }
+}
+
+@media (max-width:720px) {
+    .success-story .tab-con .content .caseBox {
+        padding: 0 22px;
+    }
+    .success-story .tab-con .content .profile {
+        padding: 1.1765em 22px;
+    }
+    .success-story .tab-con .content .category {
+        left: 22px;
     }
 }
 

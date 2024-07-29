@@ -888,6 +888,9 @@
     .consulation .container {
         padding: 28px;
     }
+    .consulation .description p br {
+        display: none;
+    }
     .consulation .formBox {
         display: flex;
         flex-direction: column;
@@ -1066,8 +1069,11 @@
 }
 
 .post .tab-con .swiper {
+    position: relative;
     padding-top: 2.3529em;
     margin-bottom: calc(3.5294em + 50px);
+    padding-bottom: 3.5294em;
+    margin-bottom: calc(3.5294em + 50px - 17px);
 }
 
 .post .tab-con .swiper-slide a {
@@ -1173,27 +1179,12 @@
     word-break: normal;
 }
 
-.post .swiper-button-prev::after,
-.post .swiper-button-next::after {
-    display: none;
+.post .tab-con .swiper-horizontal>.swiper-pagination-bullets {
+    bottom: 0px;
 }
 
-.post .swiper-button-prev,
-.post .swiper-button-next {
-    position: static;
-    width: auto;
-    height: auto;
-    font-size: 14px;
-    color: #05283c;
-    margin-top: 0;
-}
-
-.post .swiper-button-prev img {
-    margin-right: 7px;
-}
-
-.post .swiper-button-next img {
-    margin-left: 7px;
+.post .swiper-pagination-bullet {
+    background: #fff;
 }
 
 .post .btnBox {
@@ -1213,18 +1204,6 @@
     .post .titleBox {
         text-align: center;
     }
-    .post .tab-con .swiper {
-        position: relative;
-        width: 100%;
-        padding-bottom: 3.5294em;
-        margin-bottom: calc(3.5294em + 50px - 17px);
-    }
-    .post .tab-con .swiper-horizontal>.swiper-pagination-bullets {
-        bottom: 0px;
-    }
-    .post .swiper-pagination-bullet {
-        background: #fff;
-    }
 }
 
 @media(max-width:720px) {
@@ -1235,7 +1214,7 @@
         margin-bottom: calc(3.5294em + 50px - 16px);
     }
     .post .tab-con .swiper-slide a {
-        padding: 22px;
+        padding: 30px 22px;
     }
 }
 
