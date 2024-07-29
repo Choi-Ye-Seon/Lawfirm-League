@@ -36,7 +36,7 @@ html {
     --font-lightgray: #c8c8c8;
     --font-point: #D0B384;
     --font-white: #f5f5f5;
-    --description: #999;
+    --description: #777;
     font-family: 'Pretendard Variable', sans-serif;
     font-size: 17px;
     color: var(--font-main);
@@ -239,6 +239,7 @@ header .inner>ul.gnb li.main-menu>a {
     width: 130px;
     text-align: center;
     color: var(--font-white);
+    font-size: 1.1765rem;
 }
 
 header .inner>ul.gnb li.main-menu:hover::before {
@@ -265,8 +266,8 @@ header .inner>ul.gnb ul.lnb {
 
 header .inner>ul.gnb ul.lnb li a {
     display: block;
-    font-size: 0.9412rem;
-    padding: 12px 15px;
+    font-size: 1.0588rem;
+    padding: 15px;
     color: var(--font-main);
 }
 
