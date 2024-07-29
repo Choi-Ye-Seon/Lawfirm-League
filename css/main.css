@@ -211,6 +211,13 @@
     .about .inner {
         flex-direction: column;
     }
+    .about .back-to-position {
+        opacity: 1;
+    }
+    .about .back-to-position.to-right,
+    .about .back-to-position.to-left {
+        transform: none;
+    }
     .about .imgBox {
         max-width: 340px;
     }
