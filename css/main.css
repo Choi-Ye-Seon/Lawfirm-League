@@ -610,7 +610,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, .75);
+    background-color: rgba(0, 0, 0, .82);
 }
 
 .consulation .wrap {
@@ -893,7 +893,7 @@
 
 @media (max-width:620px) {
     .consulation .container {
-        padding: 28px;
+        padding: 34px 28px;
     }
     .consulation .description p br {
         display: none;
@@ -901,6 +901,7 @@
     .consulation .formBox {
         display: flex;
         flex-direction: column;
+        gap: 28px;
     }
     .consulation .formBox label {
         width: 25%;
@@ -1005,6 +1006,9 @@
     }
     .location .mapBox {
         width: 100%;
+    }
+    .location .wrap_map {
+        height: 240px;
     }
     .location .textBox {
         width: 100%;
