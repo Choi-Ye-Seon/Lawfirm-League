@@ -87,7 +87,6 @@
     cursor: pointer;
     border: 1px solid #ddd;
     box-sizing: border-box;
-    overflow: visible;
     padding-top: 37px;
     background-color: #fff;
     transition: all .2s;
