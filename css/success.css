@@ -87,6 +87,7 @@
     cursor: pointer;
     border: 1px solid #ddd;
     box-sizing: border-box;
+    overflow: visible;
     padding-top: 37px;
     background-color: #fff;
     transition: all .2s;
@@ -309,6 +310,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 40px 20px;
     }
+
     .success-story .tab-con .content {
         max-width: none;
     }
@@ -318,9 +320,11 @@
     .success-story .tab-con .content .caseBox {
         padding: 0 22px;
     }
+
     .success-story .tab-con .content .profile {
         padding: 1.1765em 22px;
     }
+
     .success-story .tab-con .content .category {
         left: 22px;
     }
@@ -330,6 +334,7 @@
     .success-story .tab-con .container {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .success-story .tab-con .content {
         max-width: none;
         width: 100%;
