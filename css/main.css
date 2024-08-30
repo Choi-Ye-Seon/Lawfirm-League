@@ -1275,12 +1275,6 @@
 }
 
 .clients .swiper-slide img {
-    width: 120px;
-    margin: 0 auto;
-}
-
-@media (max-width:580px) {
-    .clients .swiper-slide img {
-        width: 90px;
-    }
+    max-width: 120px;
+    width: 100%;
 }

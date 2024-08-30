@@ -220,7 +220,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
     border-bottom: 1px solid #ddd;
     gap: 24px;
 }
@@ -245,7 +245,8 @@
 }
 
 .success-view .content ul {
-    padding: 40px 0;
+    padding: 60px 40px 100px 40px;
+    box-sizing: border-box;
 }
 
 .success-view .content ul li {
@@ -273,6 +274,7 @@
     font-weight: 500;
     padding-bottom: 0.7em;
     font-size: 1.1765rem;
+    line-height: 1.3;
 }
 
 .success-view .content .description {
@@ -281,7 +283,7 @@
 }
 
 .success-view .content .thumbBox {
-    padding: 40px 0;
+    padding-top: 60px;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -327,6 +329,10 @@
 
     .success-story .tab-con .content .category {
         left: 22px;
+    }
+
+    .success-view .content ul {
+        padding: 60px 20px 100px 20px;
     }
 }
 
