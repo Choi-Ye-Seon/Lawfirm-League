@@ -12,7 +12,7 @@ const userLowPowerMode = false;
 
 function lowPowerMode() {
     if (navigator.getBattery) {
-        navigator.getBattery().then(function(battery) {
+        navigator.getBattery().then(function (battery) {
             if (battery.level < 0.2 || battery.charging === false || userLowPowerMode) {
                 videoContainer.classList.add('low-power-mode');
             } else {
@@ -45,7 +45,7 @@ function attemptPlayDesktop() {
 }
 
 // 비디오 데이터 로드
-video.addEventListener('loadeddata', async function() {
+video.addEventListener('loadeddata', async function () {
     try {
         await video.play();
     } catch (error) {
@@ -54,7 +54,7 @@ video.addEventListener('loadeddata', async function() {
     }
 });
 
-video.addEventListener('play', videoPlay);
+video.addEventListener('play', attemptPlay);
 video.addEventListener('suspend', lowPowerMode);
 
 // 비디오 자동재생
